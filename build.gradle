@@ -36,7 +36,7 @@ setDefaultProperty 'generate_javadocs_jar', true, false
 setDefaultProperty 'mapping_channel', true, 'stable'
 setDefaultProperty 'mapping_version', true, '39'
 setDefaultProperty 'use_dependency_at_files', true, true
-setDefaultProperty 'minecraft_username', true, 'Developer'
+setDefaultProperty 'minecraft_username', true, 'junior_Feuerwolf'
 setDefaultProperty 'extra_jvm_args', false, ''
 setDefaultProperty 'extra_tweak_classes', false, ''
 setDefaultProperty 'change_minecraft_sources', false, false
@@ -216,6 +216,10 @@ jar {
         }
         if (propertyBool('use_access_transformer')) {
             attribute_map['FMLAT'] = propertyString('access_transformer_locations')
+        }
+        // Add MixinConfigs attribute for MixinBooter to find and load mixin configurations
+        if (propertyBool('use_mixins')) {
+            attribute_map['MixinConfigs'] = propertyStringList('mixin_configs').collect(config -> "mixins.${config}.json").join(',')
         }
         attributes(attribute_map)
     }

@@ -1,0 +1,15 @@
+{
+	"package": "net.juniorwmg.paytheprice.mixin.gadgetsngoodies",
+	"required": true,
+	"refmap": "mixins.paytheprice.refmap.json",
+	"target": "@env(DEFAULT)",
+	"minVersion": "0.8.5",
+	"compatibilityLevel": "JAVA_8",
+	"mixins": [
+		"ItemFlyArmorMixin"
+	],
+	"server": [],
+	"client": [
+		"GadgetForgeEventsMixin"
+	]
+}

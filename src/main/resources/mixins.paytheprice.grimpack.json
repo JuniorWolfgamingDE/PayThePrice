@@ -1,0 +1,13 @@
+{
+	"package": "net.juniorwmg.paytheprice.mixin.grimpack",
+	"required": true,
+	"refmap": "mixins.paytheprice.refmap.json",
+	"target": "@env(DEFAULT)",
+	"minVersion": "0.8.5",
+	"compatibilityLevel": "JAVA_8",
+	"mixins": [
+		"BlockGraveMixin"
+	],
+	"server": [],
+	"client": []
+}

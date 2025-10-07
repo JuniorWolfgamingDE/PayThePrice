@@ -1,7 +1,7 @@
 {
-	"package": "",
+	"package": "net.juniorwmg.paytheprice.mixin",
 	"required": true,
-	"refmap": "${mixin_refmap}",
+	"refmap": "mixins.paytheprice.refmap.json",
 	"target": "@env(DEFAULT)",
 	"minVersion": "0.8.5",
 	"compatibilityLevel": "JAVA_8",
