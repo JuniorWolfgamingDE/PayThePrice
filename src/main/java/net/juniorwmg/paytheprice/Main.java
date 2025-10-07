@@ -14,7 +14,7 @@ import zone.rong.mixinbooter.ILateMixinLoader;
 import java.util.ArrayList;
 import java.util.List;
 
-@Mod(modid = Tags.MOD_ID, name = Tags.MOD_NAME, version = Tags.VERSION, dependencies = "required-after:mixinbooter@[10.0,);after:gadgetsngoodies@[1.2.2,);after:signpic@[2.8.1,);after:grimpack@[6.0.0.6,);after:mca@[6.0.0,);")
+@Mod(modid = Tags.MOD_ID, name = Tags.MOD_NAME, version = Tags.VERSION, dependencies = "required-after:mixinbooter@[10.0,);after:gadgetsngoodies@[1.2.2,);after:signpic@[2.8.1,);after:grimpack@[6.0.0.6,);after:mca@[6.0.0,);after:secretroomsmod@[5.6.0,)")
 public class Main implements ILateMixinLoader {
 
     public static final Logger LOGGER = LogManager.getLogger(Tags.MOD_TAG);
@@ -36,7 +36,8 @@ public class Main implements ILateMixinLoader {
                 new ConditionalMixin("gadgetsngoodies", ConfigManager.enableGadgetsNGoodiesMixin),
                 new ConditionalMixin("grimpack", ConfigManager.enableGrimPackMixin),
                 new ConditionalMixin("signpic", ConfigManager.enableSignPicMixin),
-                new ConditionalMixin("mca", ConfigManager.enableComesAliveMixin)
+                new ConditionalMixin("mca", ConfigManager.enableComesAliveMixin),
+                new ConditionalMixin("secretroomsmod", ConfigManager.enableSecretRoomsMixin)
         };
 
         for (ConditionalMixin mixin : conditionalMixins) {
