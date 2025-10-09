@@ -10,6 +10,8 @@ public class ConfigManager {
     public static boolean enableSignPicMixin;
     public static boolean enableComesAliveMixin;
     public static boolean enableSecretRoomsMixin;
+    public static boolean enableFullscreenWindowedMixin;
+    public static boolean enableRawInputMixin;
 
     public static boolean showCoremodCountInBrandingText;
     public static boolean doNotShowModdedBrandingAtAll;
@@ -27,6 +29,8 @@ public class ConfigManager {
         enableSignPicMixin = config.getBoolean("Enable Sign Picture mixin", "Main", true, "Setting this to false will re-enable the Sign Picture update checker. Update checker causes small hiccup when entering the main menu after launch.");
         enableComesAliveMixin = config.getBoolean("Enable Minecraft Comes Alive mixin", "Main", true, "Setting this to false will re-enable the MCA update and supporter list checker. Re-enabling causes launch to take ages due to failing HTTP requests.");
         enableSecretRoomsMixin = config.getBoolean("Enable Secret Rooms Mod mixin", "Main", true, "Setting this to false will re-enable the Secret Rooms Mod update checker. Can cause crashes.");
+        enableFullscreenWindowedMixin = config.getBoolean("Enable Fullscreen Windowed mixin", "Main", true, "Setting this to false will re-enable Fullscreen Windowed on CleanroomMC. CleanroomMC already has this feature integrated, the mod can cause issues.");
+        enableRawInputMixin = config.getBoolean("Enable Raw Input mixin", "Main", true, "Setting this to false will re-enable Raw Input on CleanroomMC. CleanroomMC already has this feature integrated, the mod can cause issues.");
 
         showCoremodCountInBrandingText = config.getBoolean("Show coremod count in main menu branding", "Other", false, "Setting this to true will show the number of *active* coremods in the branding text of the main menu. Ignored if 'doNotShowModdedBrandingAtAll' is true.");
         doNotShowModdedBrandingAtAll = config.getBoolean("Do not show any modified branding at all", "Other", false, "Setting this to true will remove all modded branding text from the main menu. This includes Forge version, mod count, information added by other mods like this one and f.e. VintageFix etc.");
